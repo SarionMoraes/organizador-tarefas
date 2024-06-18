@@ -4,37 +4,90 @@
     box-sizing: border-box;
 }
 
-header {
-    background-color: rgb(104, 145, 180);
-    color: #fff;
-    text-align: center;
-    margin: 16px 0;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("images/rotina.webp");
 }
 
-.titulo {
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
     text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
 }
 
 form {
-    padding: 24px;
-    text-align: center;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
 }
 
 button {
-    background-color: rgb(104, 145, 180);
+    padding: 10px 20px;
+    background-color: #007bff;
     color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
     border: none;
+    border-radius: 4px;
+    cursor: pointer;
     font-size: 16px;
-    padding: 12px;
+    margin-left: 10px;
 }
 
 button:hover {
-    background-color: rgb(61, 90, 116);
+    background-color: #0056b3;
 }
 
 ul {
+    list-style-type: none;
+    padding: 0;
     text-align: center;
+}
+
+ul li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Estilo para o texto riscado */
+ul li {
+    cursor: pointer;
+    transition: text-decoration 0.5s ease; /* Transição suave para o efeito */
+}
+
+ul li.done {
+    text-decoration: line-through; /* Aplica o riscado/strikethrough no texto */
+    color: red; /* Cor opcional para o texto riscado */
 }
